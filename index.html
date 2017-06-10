@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-8978675347431436",
+    enable_page_level_ads: true
+  });
+</script>
+    <!-- Use correct character set. -->
+    <meta charset="utf-8">
+    <!-- Tell IE to use the latest, best version. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Make the application on mobile take up the full browser screen and disable user scaling. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>Flight Viewer</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="Cesium/Build/Cesium/Cesium.js"></script>
+    <style>
+        @import url(Cesium/Build/Cesium/Widgets/widgets.css);
+        html, body {
+            width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>
+        <center>
+            FLIGHT ANALYZER
+
+        </center>
+
+    </h1>
+
+<hr>
+</div>
+<div class="left-nav">
+
+<center>
+<h2> UPLOAD FILE</h2>
+<hr width="75%">
+<br>
+<label>
+    Load File <input type="file" class="kmlFile" style="display: none;">
+</label>
+<p> <i> Please Upload a KML File. </i></p>
+<br>
+<h4 class="fileMessage"> No File Selected</h4>
+<br>
+<hr>
+<br>
+</center>
+<center>
+<h2> Analyze Phase of Flight</h2>
+<br><br><hr width="75%"><br><br>
+
+
+<select class="selectmaneuver">
+    <option value="straightAndLevel">Straight and Level</option>
+    <option value="climb">Climb</option>
+    <option value="descent">Descent</option>
+    <option value="landingApproach">Landing Approach</option>
+    <option value="turnsAroundAPoint">Turns Around A Point</option>
+</select><br><br>
+
+
+<button class="setStartTime">Start Selection</button><button class="setEndTime">Stop Selection</button><br><br>
+<p><i> Please push the "Start Selection" button when the selected phase of flight starts starts, and the "Stop Selection" button when it ends. Then Click "Analyze Selection"</i> </p>
+
+
+<button class="setManeuver">Analyze Selection</button><br><br>
+
+
+<div class="resultsdiv">
+
+<hr width="75%">
+<br>
+<button class="toggleFlightPath"> Toggle Flight Path</button><br><br>
+<p class="toggleFlightPath"><i>Toggle Visibility of the Flight Path</i></p> <br>
+
+<button class="toggleRealCourse"> Toggle Real Course </button> <br><br>
+<p class="toggleRealCourse"><i>Toggle Visibility of the Real Course During the Selected Time</i></p> <br>
+
+<button class="toggleTargetCourse"> Toggle Target Course </button><br><br>
+<p class="toggleRealCourse"><i>Toggle Visibility of the Target Course During the Selected Time</i></p> <br>
+
+<center><h2> Results </h2></center>
+<hr width="75%">
+<br>
+<p class="results">
+</p>
+
+<p><i>Please Note: On Short Selections, Ground and Vertical Speed calculations may be inaccurate. </i></p>
+
+</div>
+
+</center>
+</div>
+<div id="cesiumContainer"></div>
+<script src="main.js"></script>
+</div>
+</body>
+</html>

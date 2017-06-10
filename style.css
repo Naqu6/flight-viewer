@@ -1,0 +1,151 @@
+#cesiumContainer {
+	float: right;
+	width: 70%;
+	height: 89%;
+}
+
+* {
+	font-family: Lato;
+	color: white;
+}
+
+body {
+	background-color: rgb(31,42,49);
+}
+
+.left-nav label {
+	padding-left: 5px;
+	padding-right: 5px;
+	font-style: normal;
+}
+.left-nav button, .left-nav label {
+    background-color:rgb(31,42,49);
+    border: 1px solid white;
+    color: white;
+}
+
+.header h1 {
+	margin-bottom: 20px;
+	color: rgb(31,42,1);
+}
+
+.left-nav {
+	overflow: scroll;
+	float: left;
+	width: 30%;
+	height: 90%;
+	background-color: rgb(31,42,49);
+
+}
+
+.left-nav p {
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.padding {
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+hr {
+	border-color: white;
+	margin: 0;
+}
+
+
+/*
+	Codepen.io code for select: https://codepen.io/diqidoq/pen/wWGMmP;
+*/
+
+
+/* important to get firefox'S default outline removed
+ * MAKE SURE YOU ADD AN ALTERNATIVE OUTLINE HIGHLIGHT!
+ */
+select:-moz-focusring,
+option:-moz-focusring {
+  color: transparent !important;
+  text-shadow: 0 0 0 #000 !important;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.lt-ie10 select {
+  background-image: none;
+}
+
+select,
+select option {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none; 
+  border: none;
+  padding-left: 5px;
+  border: 1px solid #fff;
+  background: #ffffff;
+}
+
+select {
+  vertical-align: top;
+  text-overflow: ellipsis;
+  display: inline-block;
+  
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+select:not([multiple='multiple']){
+  height: 30px;
+  padding-right: 35px;
+  background:
+    linear-gradient(45deg, transparent 50%, #AAA 50%),
+    linear-gradient(135deg, #AAA 50%, transparent 50%),
+    linear-gradient(to top, #ddd, #fff);
+  background-position:
+    calc(100% - 15px) calc(50%),
+    calc(100% - 10px) calc(50%),
+    100% 0;
+  background-size:
+    5px 5px,
+    5px 5px,
+    30px 100%;
+  background-repeat: no-repeat;
+}
+
+table tr td select:not([multiple='multiple']){
+  height: 82% !important;
+}
+
+select[multiple='multiple']{
+  padding-right: 5px;
+}
+
+select:focus, option:focus {
+  outline: 1px solid white;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.2);
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.2);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.2);
+}
+
+select.failed {
+  font-size: 1.4em;
+  width:100%;
+  border: 1px solid red;
+}
+
+/* End Copypase */
